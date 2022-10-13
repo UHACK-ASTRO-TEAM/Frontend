@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo1.png";
 
@@ -18,7 +18,7 @@ const Header = () => {
     },
   ];
   return (
-    <header className="flex items-center justify-between mx-[100px] my-[60px]">
+    <header className="flex items-center justify-between mx-[100px] my-[62px]">
       <div className="cursor-pointer">
         <Link to={"/"}>
           <img src={Logo} alt="Logo" />
