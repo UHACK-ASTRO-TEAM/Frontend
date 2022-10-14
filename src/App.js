@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import Card from "./components/Card";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Admission from "./pages/Admission";
@@ -10,6 +11,7 @@ function App() {
     <>
       <Header />
       <Hero />
+      <Card />
 
       <Routes>
         <Route path="admissions-support" element={<Admission />} />

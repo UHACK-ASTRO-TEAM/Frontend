@@ -26,7 +26,7 @@ const Header = () => {
       </div>
 
       <div>
-        <ul className="flex items-center justify-between gap-5 ">
+        <ul className="flex items-center justify-between gap-5">
           {navigation.map((item, i) => (
             <Link key={i} to={item.path}>
               <li

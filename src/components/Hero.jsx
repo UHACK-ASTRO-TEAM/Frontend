@@ -3,7 +3,7 @@ import Green from "../assets/greenStar.svg";
 import { BsSearch } from "react-icons/bs";
 const Hero = () => {
   return (
-    <main className="h-[79vh] flex flex-col justify-center gap-10">
+    <section className="h-[79vh] flex flex-col justify-center gap-10">
       <div className="flex justify-center gap-4 font-['inter'] text-sm text-[#0DAC98]">
         <img src={Green} alt="" />
         <p>EXPLORE DIFFERENT INSTITUTION</p>
@@ -13,7 +13,7 @@ const Hero = () => {
       <div>
         <h1 className="px-[250px] text-5xl font-semibold text-center">
           Find the best <span className="text-[#FB7C46]">institution</span> that
-          <span className="text-[#FB7C46]">suits</span> you best.
+          <span className="text-[#FB7C46]"> suits</span> you best.
         </h1>
 
         <p className="text-[#4A5168] font-['inter'] text-lg text-center w-[836px] mx-auto">
@@ -35,10 +35,10 @@ const Hero = () => {
         <input
           type="text"
           placeholder="Search for colleges, courses, scholarships, admission support events, and communities"
-          className="pl-8 w-[800px] h-14 mx-auto"
+          className="pl-8 w-[800px] h-14 mx-auto border rounded-lg"
         />
       </div>
-    </main>
+    </section>
   );
 };
 
