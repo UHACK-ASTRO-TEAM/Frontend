@@ -1,8 +1,39 @@
 import React from "react";
 import Green from "../assets/greenStar.svg";
+import Puzzle from "../assets/puzzle.svg";
+import Edu from "../assets/Edu.svg";
+import Institution from "../assets/institution.svg";
+import { Link } from "react-router-dom";
 
 const Card = () => {
-  const card = [{ title: "Lorem" }, { title: "Lorem" }, { title: "Lorem" }];
+  const card = [
+    {
+      title: "Lorem",
+      icon: Puzzle,
+      head: "Explore",
+      details:
+        "By using the right filters, you can find the right course and college.",
+      url: "Try our course filter tool ↗",
+      path: "/explore",
+    },
+    {
+      title: "Lorem",
+      icon: Edu,
+      head: "Admission Support",
+      details: "We are available to walk you through the application process.",
+      url: "Seek advice ↗",
+      path: "/admission-support",
+    },
+    {
+      title: "Lorem",
+      icon: Institution,
+      head: "Community",
+      details:
+        "You would be able to join study groups and get latest academic news.",
+      url: "See more ↗",
+      path: "/community",
+    },
+  ];
   return (
     <section>
       <div className="grid grid-cols-2">
@@ -33,9 +64,24 @@ const Card = () => {
           {card.map((item, i) => (
             <div
               key={i}
-              className="h-[200px] w-[200px] bg-white rounded-xl text-center"
+              className="h-[200px] w-[300px] bg-white rounded-xl text-center flex flex-col items-center justify-center"
             >
-              <h1>{item.title}</h1>
+              <div className="w-fit mx-auto my-4">
+                <img src={item.icon} alt="" />
+              </div>
+
+              <div>
+                <h1 className="text-[#121933] text-xl font-semibold">
+                  {item.head}
+                </h1>
+                <p className="text-[#666666] text-sm font-['inter'] px-6">
+                  {item.details}
+                </p>
+              </div>
+
+              <div className="text-[#666666] text-xs my-2">
+                <Link to={item.path}>{item.url}</Link>
+              </div>
             </div>
           ))}
         </div>

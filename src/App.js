@@ -1,19 +1,17 @@
 import { Route, Routes } from "react-router-dom";
-import Card from "./components/Card";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
 import Admission from "./pages/Admission";
 import Community from "./pages/Community";
 import Explore from "./pages/Explore";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <>
       <Header />
-      <Hero />
-      <Card />
 
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="admissions-support" element={<Admission />} />
         <Route path="community" element={<Community />} />
         <Route path="explore" element={<Explore />} />
