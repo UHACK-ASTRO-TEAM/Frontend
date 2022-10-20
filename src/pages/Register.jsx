@@ -9,19 +9,19 @@ import axios, { Axios } from "axios";
 import { FaTimes } from "react-icons/fa";
 
 const Register = () => {
-  // const [firstName, setFisrtName] = useState("");
-  // const [lastName, setLastName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [password1, setPassword1] = useState("");
+  const [firstName, setFisrtName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [password1, setPassword1] = useState("");
 
   const url = "https://astroteambackend.up.railway.app/register";
   const [data, setData] = useState({
-    fName: "",
-    lName: "",
+    first_name: "",
+    last_name: "",
     email: "",
-    pass1: "",
-    pass2: "",
+    password: "",
+    password2: "",
   });
 
   const handle = (e) => {
@@ -33,10 +33,10 @@ const Register = () => {
 
   const inputCheck = () => {
     if (
-      data.fName === "" ||
-      data.lName === "" ||
+      data.first_name === "" ||
+      data.last_name === "" ||
       data.email === "" ||
-      data.pass1 === ""
+      data.password === ""
     ) {
       toast.error("Please fill in all the fields");
       return false;
@@ -44,7 +44,7 @@ const Register = () => {
   };
 
   const passwordCheck = function () {
-    if (data.pass1 !== data.pass2) {
+    if (data.password !== data.password2) {
       toast.error("Passwords do not match");
       return false;
     }
@@ -56,11 +56,11 @@ const Register = () => {
     inputCheck();
     axios
       .post(url, {
-        fName: data.fName,
-        lName: data.lName,
+        first_name: data.first_name,
+        last_name: data.last_name,
         email: data.email,
-        pass1: data.pass1,
-        pass2: data.pass2,
+        password: data.password,
+        password2: data.password2,
       })
       .then((res) => {
         console.log(res.data);
@@ -106,16 +106,16 @@ const Register = () => {
             <form onSubmit={(e) => handleSubmit(e)}>
               <input
                 type="text"
-                name="fName"
-                value={data.firstName}
+                name="first_name"
+                value={data.first_name}
                 placeholder="First Name"
                 onChange={(e) => handle(e)}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-[#FB7C46] block w-full p-2.5 mt-6"
               />
               <input
                 type="text"
-                name="lName"
-                value={data.lastName}
+                name="last_name"
+                value={data.last_name}
                 placeholder="Last Name"
                 onChange={(e) => handle(e)}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-[#FB7C46] block w-full p-2.5 mt-6"
@@ -130,7 +130,7 @@ const Register = () => {
               />
               <input
                 type="password"
-                name="pass1"
+                name="password"
                 value={data.password}
                 placeholder="Password"
                 onChange={(e) => handle(e)}
@@ -138,8 +138,8 @@ const Register = () => {
               />
               <input
                 type="password"
-                name="pass2"
-                value={data.password1}
+                name="password2"
+                value={data.password2}
                 placeholder="Password"
                 onChange={(e) => handle(e)}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-[#FB7C46] block w-full p-2.5 mt-6"
