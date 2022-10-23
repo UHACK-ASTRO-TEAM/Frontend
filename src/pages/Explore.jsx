@@ -1,8 +1,10 @@
+import axios from "axios";
 import React from "react";
 import Header from "../components/Header";
 import StartApplication from "../components/StartApplication";
 
 const Explore = () => {
+  axios.get(url).then();
   return (
     <>
       <Header />

@@ -6,7 +6,7 @@ import Community from "./pages/Community";
 import Explore from "./pages/Explore";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Register from "./pages/Register";
+import Reg from "./pages/Reg";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path="admissions-support" element={<Admission />} />
         <Route path="community" element={<Community />} />
         <Route path="explore" element={<Explore />} />
-        <Route path="register" element={<Register />} />
+        <Route path="register" element={<Reg />} />
         <Route path="login" element={<Login />} />
       </Routes>
 
