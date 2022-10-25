@@ -5,10 +5,20 @@ import Logo from "../assets/login-logo.svg";
 
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios, { Axios } from "axios";
 import { FaTimes } from "react-icons/fa";
+import axios from "../data/axios";
+
+const LOG_URL = "/login";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [emailIsValid, setEmailIsValid] = useState(false);
+  const [emailFocus, setEmailFocus] = useState(false);
+
+  const [pwd, setPwd] = useState("");
+  const [validPwd, setValidPwd] = useState(false);
+  const [pwdFocus, setPwdFocus] = useState(false);
+
   return (
     <>
       <div className="grid grid-cols-2 relative">
@@ -27,10 +37,14 @@ const Login = () => {
           <p>Univelcity of Abuja, Abuja</p>
         </div>
 
-        <div className="relative">
-          <button className="absolute right-11 top-8 bg-gray-400 w-[40px] h-[40px] flex items-center justify-center rounded-full text-gray-200">
-            <FaTimes size={30} />
-          </button>
+        <div>
+          <div className="relative">
+            <Link to="/home">
+              <button className="absolute right-11 top-8 bg-gray-400 w-[40px] h-[40px] flex items-center justify-center rounded-full text-gray-200">
+                <FaTimes size={30} />
+              </button>
+            </Link>
+          </div>
 
           <div className="mt-[80px] px-[50px]">
             <h1 className="text-[#FB7C46] text-4xl">Welcome back</h1>

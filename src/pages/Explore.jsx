@@ -1,10 +1,12 @@
-import axios from "axios";
 import React from "react";
 import Header from "../components/Header";
 import StartApplication from "../components/StartApplication";
+import axios from "../data/axios";
 
+const explore_url = "/categories/polytechnic";
+
+console.log(axios.get(explore_url).then((res) => res.data));
 const Explore = () => {
-  axios.get(url).then();
   return (
     <>
       <Header />

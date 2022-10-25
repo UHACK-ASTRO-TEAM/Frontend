@@ -111,22 +111,26 @@ const Reg = () => {
       setEmail("");
       setPwd("");
       setMatchPwd("");
-      setErrMsg("");
-    } catch (err) {
-      if (!err?.res) {
-        console.log();
-        setErrMsg("No Server Response");
+    } catch (e) {
+      Response.error();
+      if (Response.error().status === 0) {
+        setErrMsg(toast.error("email in use"));
+        console.log("you don dey carry me go where i no know");
       } else {
-        setErrMsg("Registration Failed");
+        setErrMsg(toast.error("registeration failed"));
       }
-      errRef.current.focus();
     }
   };
 
   return (
     <>
       {success ? (
-        <Explore />
+        <section>
+          <h1>Registered successfully</h1>
+          <Link to="/">
+            <p>HOME</p>
+          </Link>
+        </section>
       ) : (
         <div className="grid grid-cols-2">
           <section className="relative">
