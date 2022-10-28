@@ -132,8 +132,8 @@ const Reg = () => {
           </Link>
         </section>
       ) : (
-        <div className="grid grid-cols-2">
-          <section className="relative">
+        <div className="grid md:grid-cols-2">
+          <section className="hidden md:block relative">
             <Link to="/">
               <div className="absolute left-12 top-8">
                 <img src={Logo} alt="" />
@@ -161,7 +161,7 @@ const Reg = () => {
             <div className="mt-[100px] px-[50px]">
               <h1 className="text-[#FB7C46] text-4xl">Sign up for free</h1>
               <p className="text-[#666666] py-4">
-                Already a member?
+                Already a member? &nbsp;
                 <Link to="/login">
                   <span className="text-[#121933] underline">Login</span>
                 </Link>

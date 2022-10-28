@@ -21,8 +21,8 @@ const Login = () => {
 
   return (
     <>
-      <div className="grid grid-cols-2 relative">
-        <div>
+      <div className="grid md:grid-cols-2 relative">
+        <div className="hidden md:block">
           <Link to="/">
             <div className="absolute left-12 top-8">
               <img src={Logo} alt="" />
@@ -39,7 +39,7 @@ const Login = () => {
 
         <div>
           <div className="relative">
-            <Link to="/home">
+            <Link to="/">
               <button className="absolute right-11 top-8 bg-gray-400 w-[40px] h-[40px] flex items-center justify-center rounded-full text-gray-200">
                 <FaTimes size={30} />
               </button>
