@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import Reg from "./pages/Reg";
 import School_Details from "./pages/School_Details";
 import Universities from "./pages/Universities";
+import Universities_Details from "./pages/Universities_Details";
 
 const explore_url = "/categories/polytechnic";
 const Uni_url = "/categories/university/";
@@ -41,6 +42,7 @@ function App() {
 
   const navigate = useNavigate();
   const [unit, setUnit] = useState([]);
+  const [univ, setUniv] = useState([]);
   const [uniList, setUniList] = useState([]);
   const [polyList, setPolyList] = useState([]);
   const [b1, setb1] = useState(false);
@@ -55,7 +57,7 @@ function App() {
 
   const university = (school) => {
     const schDE = uni.filter((item) => school === item.id);
-    setUnit(schDE);
+    setUniv(schDE);
     navigate("/university-details");
   };
 
@@ -104,6 +106,10 @@ function App() {
         <Route path="register" element={<Reg />} />
         <Route path="login" element={<Login />} />
         <Route path="school-details" element={<School_Details unit={unit} />} />
+        <Route
+          path="university-details"
+          element={<Universities_Details univ={univ} />}
+        />
         <Route path="universities" element={<Universities />} />
       </Routes>
 

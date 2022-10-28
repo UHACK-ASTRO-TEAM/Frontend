@@ -1,11 +1,11 @@
 import React from "react";
 import Header from "../components/Header";
 
-const School_Details = ({ unit }) => {
+const Universities_Details = ({ univ }) => {
   return (
     <div>
       <Header />
-      {unit.map(
+      {univ.map(
         ({
           id,
           school_image,
@@ -50,4 +50,4 @@ const School_Details = ({ unit }) => {
   );
 };
 
-export default School_Details;
+export default Universities_Details;
