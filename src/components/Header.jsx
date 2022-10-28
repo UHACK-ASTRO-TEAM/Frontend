@@ -21,7 +21,7 @@ const Header = () => {
     },
   ];
   return (
-    <header className="flex items-center justify-between mx-[100px] my-[62px] sticky">
+    <header className="flex items-center justify-between mx-[100px] my-[30px] h-[100px] sticky">
       <div className="cursor-pointer">
         <Link to={"/"}>
           <img src={Logo} alt="Logo" />
