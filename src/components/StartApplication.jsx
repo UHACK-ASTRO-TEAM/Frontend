@@ -8,8 +8,8 @@ const StartApplication = (props) => {
   const { head, headline } = props.item;
   return (
     <section className="bg-[#F3F3F3]">
-      <div className="mx-[100px]">
-        <div className="flex gap-4 font-['inter'] text-[#FB7C46] text-lg">
+      <div className="mx-[40px] lg:mx-[100px]">
+        <div className="flex space-x-4 font-['inter'] text-[#FB7C46] text-lg mb-4">
           <img src={Orange} alt="" />
           <h1>{head}</h1>
           <img src={Orange} alt="" />

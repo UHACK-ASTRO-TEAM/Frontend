@@ -18,7 +18,7 @@ const Explore = () => {
             </h1>
           </div>
 
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row justify-between items-center">
             <div className="flex flex-col">
               <label htmlFor="location">Location</label>
               <input type="text" placeholder="Select Location" />
@@ -39,7 +39,9 @@ const Explore = () => {
               <input type="text" placeholder="Select Location" />
             </div>
 
+            <div>
             <button className="bg-[#FB7C46]">Refresh</button>
+            </div>
           </div>
         </div>
       </section>

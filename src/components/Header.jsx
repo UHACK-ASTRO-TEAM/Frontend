@@ -21,15 +21,28 @@ const Header = () => {
     },
   ];
   return (
-    <header className="flex items-center justify-between mx-[100px] my-[62px] sticky">
-      <div className="cursor-pointer">
-        <Link to={"/"}>
-          <img src={Logo} alt="Logo" />
-        </Link>
+    <header className="p-8 lg:flex lg:items-center lg:justify-between lg:mx-[100px] lg:my-[62px] sticky">
+      <div className="flex justify-between">
+        <div className="cursor-pointer">
+          <Link to={"/"}>
+            <img src={Logo} alt="Logo" />
+          </Link>
+        </div>
+
+        <div className="lg:hidden flex flex-col space-y-1.5 md:flex-row md:space-x-1.5 md:space-y-0">
+          <Link to="/login">
+            <button className="bg-[#FB7C460A] py-2.5 px-4 rounded-lg font-semibold">Login</button>
+          </Link>
+          <Link to="/register">
+            <button className="bg-[#FB7C46] py-2.5 px-3.5 rounded-lg font-semibold">
+              Sign Up
+            </button>
+          </Link>
+        </div>
       </div>
 
       <div>
-        <ul className="flex items-center justify-between gap-5">
+        <ul className="mt-4 lg:mt-0 md:px-6 flex justify-between lg:space-x-10 lg:items-center ">
           {navigation.map((item, i) => (
             <Link key={i} to={item.path}>
               <li
@@ -42,12 +55,12 @@ const Header = () => {
         </ul>
       </div>
 
-      <div>
-        <Link to="/login">
-          <button className="bg-[#FB7C460A] py-3 px-4 rounded-lg">Login</button>
+      <div className="hidden lg:block">
+        <Link to="/login"> 
+          <button className="bg-[#FB7C460A] py-3 px-4 rounded-lg font-semibold">Login</button>
         </Link>
         <Link to="/register">
-          <button className="ml-4 bg-[#FB7C46] py-3 px-4 rounded-lg ">
+          <button className="ml-4 bg-[#FB7C46] py-3 px-4 rounded-lg font-semibold">
             Sign Up
           </button>
         </Link>
